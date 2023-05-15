@@ -6,6 +6,10 @@ public class TipoMateriaBin implements Serializable {
     private int ID_Tipo;
     private String Descripcion;
 
+    private TipoMateriaBin(){
+
+    }
+
     //Insertar
     public TipoMateriaBin(String descripcion) {
         Descripcion = descripcion;
