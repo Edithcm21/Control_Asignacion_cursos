@@ -1,0 +1,51 @@
+<?xml version='1.0' encoding='utf-8'?>
+<!DOCTYPE hibernate-mapping PUBLIC
+    "-//Hibernate/Hibernate Mapping DTD 3.0//EN"
+    "http://www.hibernate.org/dtd/hibernate-mapping-3.0.dtd">
+<hibernate-mapping>
+
+    <class name="Modelo.ProfesoresEntity" table="profesores" schema="public" catalog="Control_Cursos">
+        <id name="curp">
+            <column name="curp" sql-type="varchar(18)" length="18"/>
+        </id>
+        <property name="nombre">
+            <column name="nombre" sql-type="varchar(15)" length="15" not-null="true"/>
+        </property>
+        <property name="apellidop">
+            <column name="apellidop" sql-type="varchar(15)" length="15" not-null="true"/>
+        </property>
+        <property name="apellidom">
+            <column name="apellidom" sql-type="varchar(15)" length="15" not-null="true"/>
+        </property>
+        <property name="direccion">
+            <column name="direccion" sql-type="varchar(60)" length="60" not-null="true"/>
+        </property>
+        <property name="telefono">
+            <column name="telefono" sql-type="varchar(12)" length="12" not-null="true"/>
+        </property>
+        <property name="celular">
+            <column name="celular" sql-type="varchar(12)" length="12" not-null="true"/>
+        </property>
+        <property name="tipoContrato">
+            <column name="tipo_contrato" sql-type="integer" not-null="true"/>
+        </property>
+        <property name="fechaNac">
+            <column name="fecha_nac" sql-type="date" not-null="true"/>
+        </property>
+        <property name="universidad">
+            <column name="universidad" sql-type="varchar(50)" length="50" not-null="true"/>
+        </property>
+        <property name="titulo">
+            <column name="titulo" sql-type="varchar(50)" length="50" not-null="true"/>
+        </property>
+        <property name="anoGraduacion">
+            <column name="ano_graduacion" sql-type="varchar(4)" length="4" not-null="true"/>
+        </property>
+        <property name="tipoEstudios">
+            <column name="tipo_estudios" sql-type="integer" not-null="true"/>
+        </property>
+        <property name="eMail">
+            <column name="e_mail" sql-type="varchar(40)" length="40" not-null="true"/>
+        </property>
+    </class>
+</hibernate-mapping>
