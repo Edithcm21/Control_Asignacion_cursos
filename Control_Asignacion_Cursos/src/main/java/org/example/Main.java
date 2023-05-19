@@ -13,15 +13,15 @@ public class Main {
         Transaction tx=session.beginTransaction();
 
         //Creamos una instancia a utilizar
-        crearSemestre("2022-2023");
+        crearSemestre("2022-2023",1);
         tx.commit();
         session.close();
         System.exit(0);
 
     }
 
-    public static void crearSemestre(String semestre){
-        SemestreEntity semestre1=new SemestreEntity(semestre);
-        session.save(semestre1);
+    public static void crearSemestre(String semestre, int id){
+        SemestreEntity semestre2=new SemestreEntity(id,semestre);
+        session.save(semestre2);
     }
 }

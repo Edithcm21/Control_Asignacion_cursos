@@ -15,6 +15,24 @@ public class TipoEstudiosEntity implements Serializable {
     @Column(name = "nombrete", nullable = true, length = 30)
     private String nombrete;
 
+    public TipoEstudiosEntity(String nombrete) {
+        this.nombrete = nombrete;
+    }
+
+    public TipoEstudiosEntity(int idTipo, String nombrete) {
+        this.idTipo = idTipo;
+        this.nombrete = nombrete;
+    }
+
+
+    public TipoEstudiosEntity(int idTipo) {
+        this.idTipo = idTipo;
+    }
+
+    public TipoEstudiosEntity() {
+
+    }
+
     public int getIdTipo() {
         return idTipo;
     }

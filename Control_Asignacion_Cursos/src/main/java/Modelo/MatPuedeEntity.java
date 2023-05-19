@@ -17,6 +17,23 @@ public class MatPuedeEntity implements Serializable {
     @Column(name = "id_materia", nullable = true)
     private Integer idMateria;
 
+    //insertar
+    public MatPuedeEntity(String idProfesor, Integer idMateria) {
+        this.idProfesor = idProfesor;
+        this.idMateria = idMateria;
+    }
+
+    public MatPuedeEntity(int idxx, String idProfesor, Integer idMateria) {
+        this.idxx = idxx;
+        this.idProfesor = idProfesor;
+        this.idMateria = idMateria;
+    }
+
+    public MatPuedeEntity() {
+
+    }
+
+
     public String getIdProfesor() {
         return idProfesor;
     }

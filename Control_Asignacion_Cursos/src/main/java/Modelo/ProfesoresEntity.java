@@ -51,6 +51,36 @@ public class ProfesoresEntity implements Serializable {
     @Column(name = "e_mail", nullable = true, length = 40)
     private String eMail;
 
+    public ProfesoresEntity(String curp, String nombre, String apellidop, String apellidom, String direccion, String telefono, String celular, Integer tipoContrato, Date fechaNac, String universidad, String titulo, String anoGraduacion, Integer tipoEstudios, String eMail) {
+        this.curp = curp;
+        this.nombre = nombre;
+        this.apellidop = apellidop;
+        this.apellidom = apellidom;
+        this.direccion = direccion;
+        this.telefono = telefono;
+        this.celular = celular;
+        this.tipoContrato = tipoContrato;
+        this.fechaNac = fechaNac;
+        this.universidad = universidad;
+        this.titulo = titulo;
+        this.anoGraduacion = anoGraduacion;
+        this.tipoEstudios = tipoEstudios;
+        this.eMail = eMail;
+    }
+
+    public ProfesoresEntity(String curp, String direccion, String telefono, String celular, Integer tipoContrato, String eMail) {
+        this.curp = curp;
+        this.direccion = direccion;
+        this.telefono = telefono;
+        this.celular = celular;
+        this.tipoContrato = tipoContrato;
+        this.eMail = eMail;
+    }
+
+    public ProfesoresEntity(String curp) {
+        this.curp = curp;
+    }
+
     public String getCurp() {
         return curp;
     }

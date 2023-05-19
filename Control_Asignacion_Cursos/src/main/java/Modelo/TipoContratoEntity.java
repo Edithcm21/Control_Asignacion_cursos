@@ -14,6 +14,23 @@ public class TipoContratoEntity implements Serializable {
     @Column(name = "descripcion", nullable = true, length = 30)
     private String descripcion;
 
+    public TipoContratoEntity(String descripcion) {
+        this.descripcion = descripcion;
+    }
+
+    public TipoContratoEntity(int idTipoc) {
+        this.idTipoc = idTipoc;
+    }
+
+    public TipoContratoEntity(int idTipoc, String descripcion) {
+        this.idTipoc = idTipoc;
+        this.descripcion = descripcion;
+    }
+
+    public TipoContratoEntity() {
+
+    }
+
     public int getIdTipoc() {
         return idTipoc;
     }

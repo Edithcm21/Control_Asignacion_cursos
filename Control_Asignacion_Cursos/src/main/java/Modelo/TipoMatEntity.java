@@ -14,6 +14,23 @@ public class TipoMatEntity implements Serializable {
     @Column(name = "descripcion", nullable = true, length = 30)
     private String descripcion;
 
+    public TipoMatEntity(int idTipo, String descripcion) {
+        this.idTipo = idTipo;
+        this.descripcion = descripcion;
+    }
+
+    public TipoMatEntity(int idTipo) {
+        this.idTipo = idTipo;
+    }
+
+    public TipoMatEntity(String descripcion) {
+        this.descripcion = descripcion;
+    }
+
+    public TipoMatEntity() {
+
+    }
+
     public int getIdTipo() {
         return idTipo;
     }

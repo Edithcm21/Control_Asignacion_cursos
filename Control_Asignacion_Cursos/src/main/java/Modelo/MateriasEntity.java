@@ -29,6 +29,33 @@ public class MateriasEntity implements Serializable {
     @Column(name = "id_curso", nullable = true, length = -1)
     private String idCurso;
 
+    public MateriasEntity(String nombre, Integer creditos, Integer numHoras, Integer tipoMateria, String requisitos, String idCurso) {
+        this.nombre = nombre;
+        this.creditos = creditos;
+        this.numHoras = numHoras;
+        this.tipoMateria = tipoMateria;
+        this.requisitos = requisitos;
+        this.idCurso = idCurso;
+    }
+
+    public MateriasEntity(int codigo, String nombre, Integer creditos, Integer numHoras, Integer tipoMateria, String requisitos, String idCurso) {
+        this.codigo = codigo;
+        this.nombre = nombre;
+        this.creditos = creditos;
+        this.numHoras = numHoras;
+        this.tipoMateria = tipoMateria;
+        this.requisitos = requisitos;
+        this.idCurso = idCurso;
+    }
+
+    public MateriasEntity(int codigo) {
+        this.codigo = codigo;
+    }
+
+    public MateriasEntity() {
+
+    }
+
     public int getCodigo() {
         return codigo;
     }

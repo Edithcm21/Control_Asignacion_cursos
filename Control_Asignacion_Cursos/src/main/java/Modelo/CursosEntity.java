@@ -29,6 +29,25 @@ public class CursosEntity implements Serializable {
     @Column(name = "nombre", nullable = true, length = 20)
     private String nombre;
 
+    public CursosEntity(String nrc, Integer cupoMinimo, Integer cupoActual, Integer cupoMaximo, Integer semestre, String tutor, String nombre) {
+        this.nrc = nrc;
+        this.cupoMinimo = cupoMinimo;
+        this.cupoActual = cupoActual;
+        this.cupoMaximo = cupoMaximo;
+        this.semestre = semestre;
+        this.tutor = tutor;
+        this.nombre = nombre;
+    }
+
+    //Eliminar
+    public CursosEntity(String nrc) {
+        this.nrc = nrc;
+    }
+
+    public CursosEntity() {
+
+    }
+
     public String getNrc() {
         return nrc;
     }

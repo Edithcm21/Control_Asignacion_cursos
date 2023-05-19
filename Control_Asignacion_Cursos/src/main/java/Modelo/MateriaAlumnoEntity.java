@@ -26,7 +26,32 @@ public class MateriaAlumnoEntity implements Serializable {
     private String indicencias;
 
 
+    public MateriaAlumnoEntity(String idAlumno, Integer idMateria, Integer calificacion, String indicencias) {
+        this.idAlumno = idAlumno;
+        this.idMateria = idMateria;
+        this.calificacion = calificacion;
+        this.indicencias = indicencias;
+    }
 
+    public MateriaAlumnoEntity(int id_xx, String idAlumno, Integer idMateria, Integer calificacion, String indicencias) {
+        this.id_xx = id_xx;
+        this.idAlumno = idAlumno;
+        this.idMateria = idMateria;
+        this.calificacion = calificacion;
+        this.indicencias = indicencias;
+    }
+
+    public MateriaAlumnoEntity(String idAlumno) {
+        this.idAlumno = idAlumno;
+    }
+
+    public MateriaAlumnoEntity(Integer idMateria) {
+        this.idMateria = idMateria;
+    }
+
+    public MateriaAlumnoEntity() {
+
+    }
 
     public String getIdAlumno() {
         return idAlumno;

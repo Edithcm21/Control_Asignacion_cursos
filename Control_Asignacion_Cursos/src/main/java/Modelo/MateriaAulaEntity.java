@@ -31,6 +31,35 @@ public class MateriaAulaEntity implements Serializable {
     @Column(name = "hora_final", nullable = true)
     private Time horaFinal;
 
+
+    public MateriaAulaEntity(int idMateria, Integer idSalon, String dia, String mes, Time horaInicio, Time horaFinal) {
+        this.idMateria = idMateria;
+        this.idSalon = idSalon;
+        this.dia = dia;
+        this.mes = mes;
+        this.horaInicio = horaInicio;
+        this.horaFinal = horaFinal;
+    }
+
+    public MateriaAulaEntity(int id_xx, int idMateria, Integer idSalon, String dia, String mes, Time horaInicio, Time horaFinal) {
+        this.id_xx = id_xx;
+        this.idMateria = idMateria;
+        this.idSalon = idSalon;
+        this.dia = dia;
+        this.mes = mes;
+        this.horaInicio = horaInicio;
+        this.horaFinal = horaFinal;
+    }
+
+    public MateriaAulaEntity(int idMateria, Integer idSalon) {
+        this.idMateria = idMateria;
+        this.idSalon = idSalon;
+    }
+
+    public MateriaAulaEntity() {
+
+    }
+
     public int getIdMateria() {
         return idMateria;
     }

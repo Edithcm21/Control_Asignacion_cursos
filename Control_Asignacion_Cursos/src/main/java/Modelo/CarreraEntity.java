@@ -13,6 +13,26 @@ public class CarreraEntity implements Serializable {
     @Basic
     @Column(name = "nombrec", nullable = true, length = 30)
     private String nombrec;
+    //insertar
+
+    public CarreraEntity(String nombrec) {
+        this.nombrec = nombrec;
+    }
+
+    //Consultar y modificar
+    public CarreraEntity(int idCar, String nombrec) {
+        this.idCar = idCar;
+        this.nombrec = nombrec;
+    }
+
+    //Eliminar
+    public CarreraEntity(int idCar) {
+        this.idCar = idCar;
+    }
+
+    public CarreraEntity() {
+
+    }
 
     public int getIdCar() {
         return idCar;

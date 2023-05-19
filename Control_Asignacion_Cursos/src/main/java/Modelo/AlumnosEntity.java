@@ -45,6 +45,48 @@ public class AlumnosEntity implements Serializable {
     @Column(name = "telefono", nullable = true, length = 12)
     private String telefono;
 
+    @Basic
+    @Column(name = "Contraseña", nullable = true, length = 15)
+    private String Contraseña;
+
+    public String getContraseña() {
+        return Contraseña;
+    }
+
+    public void setContraseña(String contraseña) {
+        Contraseña = contraseña;
+    }
+
+
+    //Insertar y consultar y modificar
+
+    public AlumnosEntity(String matricula, Integer semestre, String curp, Integer claveCarrera, String apellidop, String apellidom, String nombre, Date fechanac, String cel, String eMail, String direccion, String telefono) {
+        this.matricula = matricula;
+        this.semestre = semestre;
+        this.curp = curp;
+        this.claveCarrera = claveCarrera;
+        this.apellidop = apellidop;
+        this.apellidom = apellidom;
+        this.nombre = nombre;
+        this.fechanac = fechanac;
+        this.cel = cel;
+        this.eMail = eMail;
+        this.direccion = direccion;
+        this.telefono = telefono;
+    }
+
+    //eliminar
+
+
+    public AlumnosEntity(String matricula) {
+        this.matricula = matricula;
+    }
+
+    public AlumnosEntity() {
+
+    }
+
+
     public String getMatricula() {
         return matricula;
     }

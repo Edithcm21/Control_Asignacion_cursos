@@ -17,6 +17,29 @@ public class AulaEntity implements Serializable {
     @Column(name = "num_pupitres", nullable = true)
     private Integer numPupitres;
 
+    //insertar
+    public AulaEntity(String lugar, Integer numPupitres) {
+        this.lugar = lugar;
+        this.numPupitres = numPupitres;
+    }
+
+    //modificar y consultar
+    public AulaEntity(int codigo, String lugar, Integer numPupitres) {
+        this.codigo = codigo;
+        this.lugar = lugar;
+        this.numPupitres = numPupitres;
+    }
+
+    //eliminar
+
+    public AulaEntity(int codigo) {
+        this.codigo = codigo;
+    }
+
+    public AulaEntity() {
+
+    }
+
     public int getCodigo() {
         return codigo;
     }

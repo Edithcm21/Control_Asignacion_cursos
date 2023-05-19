@@ -84,6 +84,7 @@ create table  if not exists Tipo_Mat(
  );
  
   create table mat_puede(
+	idxx serial primary key no null,
 	id_profesor varchar(18),
 	id_materia int,
 	foreign key (id_profesor) references Profesores(Curp),
@@ -93,6 +94,7 @@ create table  if not exists Tipo_Mat(
 
 create table  if not exists Alumnos(
 	Matricula varchar(9) primary key not null,
+	Contraseña varchar(15),
 	Semestre int,
 	curp varchar(18),
 	Clave_Carrera int,
@@ -109,6 +111,7 @@ create table  if not exists Alumnos(
  );
  
   create table  if not exists Materia_Alumno(
+	id_xx serial primary key not null,
 	id_Alumno varchar(10) not null,
 	id_materia int,
 	Calificacion int,
@@ -127,6 +130,7 @@ create table  if not exists Alumnos(
  
  
   create table  if not exists Materia_Aula(
+	id_xx serial primary key no null,
 	id_materia int not null,
 	id_salon int,
 	dia varchar(10),
