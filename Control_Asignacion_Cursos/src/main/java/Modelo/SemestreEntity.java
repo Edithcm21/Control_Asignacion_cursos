@@ -6,7 +6,7 @@ import java.io.Serializable;
 @Entity
 @Table(name = "semestre", schema = "public", catalog = "Control_Cursos")
 public class SemestreEntity implements Serializable {
-    @GeneratedValue(strategy = GenerationType.IDENTITY)
+    @GeneratedValue(strategy = GenerationType.AUTO)
     @Id
     @Column(name = "codigo", nullable = false)
     private int codigo;
