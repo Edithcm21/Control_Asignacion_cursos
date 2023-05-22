@@ -6,12 +6,14 @@ import java.io.Serializable;
 @Entity
 @Table(name = "semestre", schema = "public", catalog = "Control_Cursos")
 public class SemestreEntity implements Serializable {
-    @GeneratedValue(strategy = GenerationType.AUTO)
+
     @Id
-    @Column(name = "codigo", nullable = false)
+    @Column(name = "codigo", nullable = false, unique = true)
+    @GeneratedValue(strategy = GenerationType.IDENTITY)
+
     private int codigo;
     @Basic
-    @Column(name = "num_semestre", nullable = true, length = 30)
+    @Column(name = "num_semestre", length = 30)
     private String numSemestre;
     public SemestreEntity(){
 

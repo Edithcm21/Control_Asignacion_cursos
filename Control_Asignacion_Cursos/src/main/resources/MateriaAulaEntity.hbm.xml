@@ -7,6 +7,7 @@
     <class name="Modelo.MateriaAulaEntity" table="materia_aula" schema="public" catalog="Control_Cursos">
         <id name="id_xx">
             <column name="id_xx" sql-type="integer"/>
+            <generator class="increment"></generator>
         </id>
         <property name="idMateria">
             <column name="id_materia" sql-type="integer"/>

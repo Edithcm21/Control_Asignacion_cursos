@@ -7,6 +7,7 @@
     <class name="Modelo.ProfesoresEntity" table="profesores" schema="public" catalog="Control_Cursos">
         <id name="curp">
             <column name="curp" sql-type="varchar(18)" length="18"/>
+
         </id>
         <property name="nombre">
             <column name="nombre" sql-type="varchar(15)" length="15" not-null="true"/>

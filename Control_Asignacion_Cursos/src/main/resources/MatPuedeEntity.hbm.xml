@@ -7,6 +7,7 @@
     <class name="Modelo.MatPuedeEntity" table="mat_puede" schema="public" catalog="Control_Cursos">
         <id name="idxx">
             <column name="idxx" sql-type="integer" length="8"/>
+            <generator class="increment"></generator>
         </id>
         <property name="idProfesor">
             <column name="id_profesor" sql-type="varchar(18)" length="18" not-null="true"/>
