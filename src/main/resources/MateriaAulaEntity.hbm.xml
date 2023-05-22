@@ -1,0 +1,31 @@
+<?xml version='1.0' encoding='utf-8'?>
+<!DOCTYPE hibernate-mapping PUBLIC
+    "-//Hibernate/Hibernate Mapping DTD 3.0//EN"
+    "http://www.hibernate.org/dtd/hibernate-mapping-3.0.dtd">
+<hibernate-mapping>
+
+    <class name="Modelo.MateriaAulaEntity" table="materia_aula" schema="public" catalog="Control_Cursos">
+        <id name="id_xx">
+            <column name="id_xx" sql-type="integer"/>
+            <generator class="increment"></generator>
+        </id>
+        <property name="idMateria">
+            <column name="id_materia" sql-type="integer"/>
+        </property>
+        <property name="idSalon">
+            <column name="id_salon" sql-type="integer" not-null="true"/>
+        </property>
+        <property name="dia">
+            <column name="dia" sql-type="varchar(10)" length="10" not-null="true"/>
+        </property>
+        <property name="mes">
+            <column name="mes" sql-type="varchar(15)" length="15" not-null="true"/>
+        </property>
+        <property name="horaInicio">
+            <column name="hora_inicio" sql-type="time" not-null="true"/>
+        </property>
+        <property name="horaFinal">
+            <column name="hora_final" sql-type="time" not-null="true"/>
+        </property>
+    </class>
+</hibernate-mapping>

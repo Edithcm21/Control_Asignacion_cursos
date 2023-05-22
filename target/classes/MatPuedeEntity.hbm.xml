@@ -1,0 +1,19 @@
+<?xml version='1.0' encoding='utf-8'?>
+<!DOCTYPE hibernate-mapping PUBLIC
+        "-//Hibernate/Hibernate Mapping DTD 3.0//EN"
+        "http://www.hibernate.org/dtd/hibernate-mapping-3.0.dtd">
+<hibernate-mapping>
+
+    <class name="Modelo.MatPuedeEntity" table="mat_puede" schema="public" catalog="Control_Cursos">
+        <id name="idxx">
+            <column name="idxx" sql-type="integer" length="8"/>
+            <generator class="increment"></generator>
+        </id>
+        <property name="idProfesor">
+            <column name="id_profesor" sql-type="varchar(18)" length="18" not-null="true"/>
+        </property>
+        <property name="idMateria">
+            <column name="id_materia" sql-type="integer" not-null="true"/>
+        </property>
+    </class>
+</hibernate-mapping>
