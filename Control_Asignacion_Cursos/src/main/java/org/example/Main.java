@@ -27,7 +27,7 @@ public class Main {
         System.out.println(semestreDao.getSemestreById(1).getNumSemestre());
         semestreDao.listaSemestres();
 
-       // crearTipo_contrato("Hola");
+        // crearTipo_contrato("Hola");
         //tx.commit();
         //SemestreEntity semestre1 = new SemestreEntity(2,"febrero2022");
         // Eliminar un registro

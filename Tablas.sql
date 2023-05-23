@@ -1,5 +1,3 @@
-//Catalogos
-
 
 
 create table  if not exists Tipo_Mat(
