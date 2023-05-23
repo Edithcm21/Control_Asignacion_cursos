@@ -45,16 +45,54 @@ public class SemestreDao {
     public List<SemestreEntity> listaSemestres(){
 
         String queryString = "FROM SemestreEntity order by codigo";
+        List<SemestreEntity> semestreList=null;
 
         try (Session session= HibernateUtils.getSessionFactory().openSession()) {
-            List<SemestreEntity> semestreList = session.createQuery(queryString, SemestreEntity.class).getResultList();
+             semestreList= session.createQuery(queryString, SemestreEntity.class).getResultList();
 
             for (SemestreEntity u : semestreList) {
 
                 System.out.println("Codigo " + u.getCodigo() + ", Semestre: " + u.getNumSemestre());
             }
-            return semestreList;
+
         }
+        return semestreList;
+
+    }
+
+    // Modificar un registro existente
+
+    public boolean UpdateSemestre(SemestreEntity semestre){
+        try (Session session = HibernateUtils.getSessionFactory().openSession()) {
+            Transaction tx=session.beginTransaction();
+
+            session.update(semestre); // Realiza la operación de actualización
+            tx.commit(); // Confirma la transacción
+            session.close();
+            return true;
+        } catch (Exception e) {
+            // Manejo de excepciones
+            System.out.println("no se pudo completar la modificacion");
+        }
+        return false;
+    }
+
+    // Eliminar un registro
+    //session.delete(semestre1);
+
+    public boolean deleteSemestre(SemestreEntity semestre){
+        try (Session session = HibernateUtils.getSessionFactory().openSession()) {
+            Transaction tx=session.beginTransaction();
+
+            session.delete(semestre); // Realiza la operación de actualización
+            tx.commit(); // Confirma la transacción
+            session.close();
+            return true;
+        } catch (Exception e) {
+            // Manejo de excepciones
+            System.out.println("no se pudo completar la eliminacion");
+        }
+        return false;
     }
 
 }
