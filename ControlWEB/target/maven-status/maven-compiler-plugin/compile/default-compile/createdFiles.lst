@@ -1,0 +1,16 @@
+Modelo\TipoEstudiosEntity.class
+Modelo\CursosEntity.class
+Modelo\MateriaAlumnoEntity.class
+Modelo\ProfesoresEntity.class
+Modelo\AulaEntity.class
+Modelo\MateriasEntity.class
+Modelo\CarreraEntity.class
+Modelo\TipoContratoEntity.class
+Datos\SemestreDao.class
+Utils\HibernateUtils.class
+example\Main.class
+Modelo\SemestreEntity.class
+Modelo\TipoMatEntity.class
+Modelo\MatPuedeEntity.class
+Modelo\MateriaAulaEntity.class
+Modelo\AlumnosEntity.class

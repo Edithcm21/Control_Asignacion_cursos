@@ -13,6 +13,9 @@ public class Main {
     static SemestreEntity semestre2;
     private static Session session;
     public static void main(String[] args) {
+
+        //Creamos el objeto para la pagina del login
+        new LoginAlumnos();
         //Abrimos la sesion con hibernate
         session= HibernateUtils.getSessionFactory().openSession();
         Transaction tx=session.beginTransaction();

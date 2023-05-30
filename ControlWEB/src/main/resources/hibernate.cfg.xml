@@ -1,0 +1,43 @@
+<?xml version='1.0' encoding='utf-8'?>
+<!DOCTYPE hibernate-configuration PUBLIC
+    "-//Hibernate/Hibernate Configuration DTD//EN"
+    "http://www.hibernate.org/dtd/hibernate-configuration-3.0.dtd">
+<hibernate-configuration>
+  <session-factory>
+    <property name="connection.url">jdbc:postgresql://localhost:5432/Control_Cursos</property>
+    <property name="connection.driver_class">org.postgresql.Driver</property>
+    <property name="connection.username">postgres</property>
+    <property name="connection.password">637241522</property>
+    <mapping resource="AlumnosEntity.hbm.xml"/>
+      <mapping class="Modelo.AlumnosEntity"/>
+    <mapping class="Modelo.AulaEntity"/>
+    <mapping resource="AulaEntity.hbm.xml"/>
+    <mapping class="Modelo.CarreraEntity"/>
+    <mapping resource="CarreraEntity.hbm.xml"/>
+    <mapping resource="CursosEntity.hbm.xml"/>
+    <mapping class="Modelo.CursosEntity"/>
+    <mapping class="Modelo.MatPuedeEntity"/>
+    <mapping resource="MatPuedeEntity.hbm.xml"/>
+    <mapping class="Modelo.MateriaAlumnoEntity"/>
+    <mapping resource="MateriaAlumnoEntity.hbm.xml"/>
+    <mapping resource="MateriaAulaEntity.hbm.xml"/>
+    <mapping class="Modelo.MateriaAulaEntity"/>
+    <mapping class="Modelo.MateriasEntity"/>
+    <mapping resource="MateriasEntity.hbm.xml"/>
+    <mapping class="Modelo.ProfesoresEntity"/>
+    <mapping resource="ProfesoresEntity.hbm.xml"/>
+    <mapping class="Modelo.SemestreEntity"/>
+    <mapping resource="SemestreEntity.hbm.xml"/>
+    <mapping class="Modelo.TipoContratoEntity"/>
+    <mapping resource="TipoContratoEntity.hbm.xml"/>
+    <mapping resource="TipoEstudiosEntity.hbm.xml"/>
+    <mapping class="Modelo.TipoEstudiosEntity"/>
+    <mapping class="Modelo.TipoMatEntity"/>
+    <mapping resource="TipoMatEntity.hbm.xml"/>
+    <!-- <property name="connection.username"/> -->
+    <!-- <property name="connection.password"/> -->
+
+    <!-- DB schema will be updated if needed -->
+    <!-- <property name="hibernate.hbm2ddl.auto">update</property> -->
+  </session-factory>
+</hibernate-configuration>

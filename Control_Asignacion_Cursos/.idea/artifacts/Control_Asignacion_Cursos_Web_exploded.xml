@@ -1,0 +1,13 @@
+<component name="ArtifactManager">
+  <artifact type="exploded-war" name="Control_Asignacion_Cursos:Web exploded">
+    <output-path>$PROJECT_DIR$/out/artifacts/Control_Asignacion_Cursos_Web_exploded</output-path>
+    <root id="root">
+      <element id="directory" name="WEB-INF">
+        <element id="directory" name="classes">
+          <element id="module-output" name="Control_Asignacion_Cursos" />
+        </element>
+      </element>
+      <element id="javaee-facet-resources" facet="Control_Asignacion_Cursos/web/Web" />
+    </root>
+  </artifact>
+</component>

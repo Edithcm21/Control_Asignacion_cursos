@@ -1,0 +1,30 @@
+<?xml version='1.0' encoding='utf-8'?>
+<!DOCTYPE hibernate-mapping PUBLIC
+    "-//Hibernate/Hibernate Mapping DTD 3.0//EN"
+    "http://www.hibernate.org/dtd/hibernate-mapping-3.0.dtd">
+<hibernate-mapping>
+
+    <class name="Modelo.MateriasEntity" table="materias" schema="public" catalog="Control_Cursos">
+        <id name="codigo">
+            <column name="codigo" sql-type="integer"/>
+        </id>
+        <property name="nombre">
+            <column name="nombre" sql-type="varchar(50)" length="50" not-null="true"/>
+        </property>
+        <property name="creditos">
+            <column name="creditos" sql-type="integer" not-null="true"/>
+        </property>
+        <property name="numHoras">
+            <column name="num_horas" sql-type="integer" not-null="true"/>
+        </property>
+        <property name="tipoMateria">
+            <column name="tipo_materia" sql-type="integer" not-null="true"/>
+        </property>
+        <property name="requisitos">
+            <column name="requisitos" sql-type="varchar(500)" length="500" not-null="true"/>
+        </property>
+        <property name="idCurso">
+            <column name="id_curso" sql-type="varchar" not-null="true"/>
+        </property>
+    </class>
+</hibernate-mapping>

@@ -55,22 +55,24 @@ create table  if not exists Tipo_Mat(
  );
 
 
+ alter table profesores add column materias_puede varchar(200)
+
+
  
  
   create table  if not exists Cursos(
 	NRC varchar(8) primary key not null,
-	Cupo_minimo int,
-	Cupo_Actual int,
-	Cupo_Maximo int,
+	clave_carrera int
 	Semestre int,
 	Tutor varchar(18),
 	nombre varchar(20),
 	foreign key (Semestre) references Semestre(Codigo),
-	foreign key (Tutor) references Profesores(curp)
+	foreign key (Tutor) references Profesores(curp),
+	 foreign key (Clave_Carrera) references Carrera(id_Car)
 	
 	  
  );
- 
+
   
  create table  if not exists Materias(
 	Codigo serial primary key not null,
@@ -80,18 +82,23 @@ create table  if not exists Tipo_Mat(
 	Tipo_Materia int,
 	Requisitos varchar(500),
 	id_curso int, 
+	cupo_min int,
+	cupo_act int,
+	cupo_max int,
+	
 	foreign key (id_curso) references Cursos(nrc),
 	foreign key (Tipo_Materia) references Tipo_Mat(ID_Tipo) 
  );
  
-  create table mat_puede(
-	idxx serial primary key no null,
+  create table mat_profesor(
+	idxx serial primary key not null,
 	id_profesor varchar(18),
 	id_materia int,
 	foreign key (id_profesor) references Profesores(Curp),
 	foreign key (id_materia) references Materias(Codigo)
 	
  );
+drop table mat_puede
 
 create table  if not exists Alumnos(
 	Matricula varchar(9) primary key not null,

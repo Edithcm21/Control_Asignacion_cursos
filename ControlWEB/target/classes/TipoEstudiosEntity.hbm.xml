@@ -1,0 +1,15 @@
+<?xml version='1.0' encoding='utf-8'?>
+<!DOCTYPE hibernate-mapping PUBLIC
+    "-//Hibernate/Hibernate Mapping DTD 3.0//EN"
+    "http://www.hibernate.org/dtd/hibernate-mapping-3.0.dtd">
+<hibernate-mapping>
+
+    <class name="Modelo.TipoEstudiosEntity" table="tipo_estudios" schema="public" catalog="Control_Cursos">
+        <id name="idTipo">
+            <column name="id_tipo" sql-type="integer"/>
+        </id>
+        <property name="nombrete">
+            <column name="nombrete" sql-type="varchar(30)" length="30" not-null="true"/>
+        </property>
+    </class>
+</hibernate-mapping>
