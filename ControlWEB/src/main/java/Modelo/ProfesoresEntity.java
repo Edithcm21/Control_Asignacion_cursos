@@ -161,4 +161,16 @@ public class ProfesoresEntity {
     public void seteMail(String eMail) {
         this.eMail = eMail;
     }
+
+    @Basic
+    @Column(name = "materias_puede", nullable = true, length = 200)
+    private String materiasPuede;
+
+    public String getMateriasPuede() {
+        return materiasPuede;
+    }
+
+    public void setMateriasPuede(String materiasPuede) {
+        this.materiasPuede = materiasPuede;
+    }
 }

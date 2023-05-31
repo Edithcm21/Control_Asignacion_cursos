@@ -34,6 +34,9 @@
     <mapping class="Modelo.TipoEstudiosEntity"/>
     <mapping class="Modelo.TipoMatEntity"/>
     <mapping resource="TipoMatEntity.hbm.xml"/>
+      <mapping class="Datos.AlumnosEntity"/>
+    <mapping class="Modelo.MatProfesorEntity"/>
+    <mapping resource="MatProfesorEntity.hbm.xml"/>
     <!-- <property name="connection.username"/> -->
     <!-- <property name="connection.password"/> -->
 

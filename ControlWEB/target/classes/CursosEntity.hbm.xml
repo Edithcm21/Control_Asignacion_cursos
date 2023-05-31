@@ -8,15 +8,6 @@
         <id name="nrc">
             <column name="nrc" sql-type="varchar(8)" length="8"/>
         </id>
-        <property name="cupoMinimo">
-            <column name="cupo_minimo" sql-type="integer" not-null="true"/>
-        </property>
-        <property name="cupoActual">
-            <column name="cupo_actual" sql-type="integer" not-null="true"/>
-        </property>
-        <property name="cupoMaximo">
-            <column name="cupo_maximo" sql-type="integer" not-null="true"/>
-        </property>
         <property name="semestre">
             <column name="semestre" sql-type="integer" not-null="true"/>
         </property>
@@ -25,6 +16,9 @@
         </property>
         <property name="nombre">
             <column name="nombre" sql-type="varchar(20)" length="20" not-null="true"/>
+        </property>
+        <property name="claveCarrera">
+            <column name="clave_carrera" sql-type="integer" not-null="true"/>
         </property>
     </class>
 </hibernate-mapping>

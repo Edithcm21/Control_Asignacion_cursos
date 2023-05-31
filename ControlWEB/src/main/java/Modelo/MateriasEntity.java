@@ -83,4 +83,40 @@ public class MateriasEntity {
     public void setIdCurso(String idCurso) {
         this.idCurso = idCurso;
     }
+
+    @Basic
+    @Column(name = "cupo_min", nullable = true)
+    private Integer cupoMin;
+
+    public Integer getCupoMin() {
+        return cupoMin;
+    }
+
+    public void setCupoMin(Integer cupoMin) {
+        this.cupoMin = cupoMin;
+    }
+
+    @Basic
+    @Column(name = "cupo_act", nullable = true)
+    private Integer cupoAct;
+
+    public Integer getCupoAct() {
+        return cupoAct;
+    }
+
+    public void setCupoAct(Integer cupoAct) {
+        this.cupoAct = cupoAct;
+    }
+
+    @Basic
+    @Column(name = "cupo_max", nullable = true)
+    private Integer cupoMax;
+
+    public Integer getCupoMax() {
+        return cupoMax;
+    }
+
+    public void setCupoMax(Integer cupoMax) {
+        this.cupoMax = cupoMax;
+    }
 }

@@ -1,6 +1,8 @@
+Datos\AlumnosEntity.class
 Modelo\TipoEstudiosEntity.class
 Modelo\CursosEntity.class
 Modelo\MateriaAlumnoEntity.class
+Modelo\MatProfesorEntity.class
 Modelo\ProfesoresEntity.class
 Modelo\AulaEntity.class
 Modelo\MateriasEntity.class

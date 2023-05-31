@@ -9,15 +9,7 @@ public class CursosEntity {
     @Id
     @Column(name = "nrc", nullable = false, length = 8)
     private String nrc;
-    @Basic
-    @Column(name = "cupo_minimo", nullable = true)
-    private Integer cupoMinimo;
-    @Basic
-    @Column(name = "cupo_actual", nullable = true)
-    private Integer cupoActual;
-    @Basic
-    @Column(name = "cupo_maximo", nullable = true)
-    private Integer cupoMaximo;
+
     @Basic
     @Column(name = "semestre", nullable = true)
     private Integer semestre;
@@ -36,29 +28,7 @@ public class CursosEntity {
         this.nrc = nrc;
     }
 
-    public Integer getCupoMinimo() {
-        return cupoMinimo;
-    }
 
-    public void setCupoMinimo(Integer cupoMinimo) {
-        this.cupoMinimo = cupoMinimo;
-    }
-
-    public Integer getCupoActual() {
-        return cupoActual;
-    }
-
-    public void setCupoActual(Integer cupoActual) {
-        this.cupoActual = cupoActual;
-    }
-
-    public Integer getCupoMaximo() {
-        return cupoMaximo;
-    }
-
-    public void setCupoMaximo(Integer cupoMaximo) {
-        this.cupoMaximo = cupoMaximo;
-    }
 
     public Integer getSemestre() {
         return semestre;
@@ -82,5 +52,17 @@ public class CursosEntity {
 
     public void setNombre(String nombre) {
         this.nombre = nombre;
+    }
+
+    @Basic
+    @Column(name = "clave_carrera", nullable = true)
+    private Integer claveCarrera;
+
+    public Integer getClaveCarrera() {
+        return claveCarrera;
+    }
+
+    public void setClaveCarrera(Integer claveCarrera) {
+        this.claveCarrera = claveCarrera;
     }
 }
