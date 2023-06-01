@@ -44,8 +44,32 @@ public class AlumnosEntity {
     @Column(name = "telefono", nullable = true, length = 12)
     private String telefono;
     @Basic
-    @Column(name = "contraseña", nullable = true, length = 15)
-    private String contraseña;
+    @Column(name = "password1", nullable = true, length = 15)
+    private String password1;
+
+    public AlumnosEntity(){
+
+    }
+
+    public AlumnosEntity(String matricula, Integer semestre, String curp, Integer claveCarrera, String apellidop, String apellidom, String nombre, Date fechanac, String cel, String eMail, String direccion, String telefono, String contraseña) {
+        this.matricula = matricula;
+        this.semestre = semestre;
+        this.curp = curp;
+        this.claveCarrera = claveCarrera;
+        this.apellidop = apellidop;
+        this.apellidom = apellidom;
+        this.nombre = nombre;
+        this.fechanac = fechanac;
+        this.cel = cel;
+        this.eMail = eMail;
+        this.direccion = direccion;
+        this.telefono = telefono;
+    }
+
+    public AlumnosEntity(String matricula, String pass) {
+        this.matricula = matricula;
+        this.password1 = pass;
+    }
 
     public String getMatricula() {
         return matricula;
@@ -143,11 +167,12 @@ public class AlumnosEntity {
         this.telefono = telefono;
     }
 
-    public String getContraseña() {
-        return contraseña;
+
+    public String getPassword1() {
+        return password1;
     }
 
-    public void setContraseña(String contraseña) {
-        this.contraseña = contraseña;
+    public void setPassword1(String password1) {
+        this.password1 = password1;
     }
 }

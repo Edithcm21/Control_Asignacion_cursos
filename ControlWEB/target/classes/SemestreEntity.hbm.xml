@@ -4,4 +4,12 @@
     "http://www.hibernate.org/dtd/hibernate-mapping-3.0.dtd">
 <hibernate-mapping>
 
+    <class name="Modelo.SemestreEntity" table="semestre" schema="public" catalog="Control_Cursos">
+        <id name="codigo">
+            <column name="codigo" sql-type="integer"/>
+        </id>
+        <property name="numSemestre">
+            <column name="num_semestre" sql-type="varchar(30)" length="30" not-null="true"/>
+        </property>
+    </class>
 </hibernate-mapping>

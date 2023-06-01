@@ -27,6 +27,15 @@ public class MateriasEntity {
     @Basic
     @Column(name = "id_curso", nullable = true, length = -1)
     private String idCurso;
+    @Basic
+    @Column(name = "cupo_min", nullable = true)
+    private Integer cupoMin;
+    @Basic
+    @Column(name = "cupo_act", nullable = true)
+    private Integer cupoAct;
+    @Basic
+    @Column(name = "cupo_max", nullable = true)
+    private Integer cupoMax;
 
     public int getCodigo() {
         return codigo;
@@ -84,10 +93,6 @@ public class MateriasEntity {
         this.idCurso = idCurso;
     }
 
-    @Basic
-    @Column(name = "cupo_min", nullable = true)
-    private Integer cupoMin;
-
     public Integer getCupoMin() {
         return cupoMin;
     }
@@ -96,10 +101,6 @@ public class MateriasEntity {
         this.cupoMin = cupoMin;
     }
 
-    @Basic
-    @Column(name = "cupo_act", nullable = true)
-    private Integer cupoAct;
-
     public Integer getCupoAct() {
         return cupoAct;
     }
@@ -107,10 +108,6 @@ public class MateriasEntity {
     public void setCupoAct(Integer cupoAct) {
         this.cupoAct = cupoAct;
     }
-
-    @Basic
-    @Column(name = "cupo_max", nullable = true)
-    private Integer cupoMax;
 
     public Integer getCupoMax() {
         return cupoMax;

@@ -102,7 +102,7 @@ drop table mat_puede
 
 create table  if not exists Alumnos(
 	Matricula varchar(9) primary key not null,
-	Contraseña varchar(15),
+	password1 varchar(15),
 	Semestre int,
 	curp varchar(18),
 	Clave_Carrera int,

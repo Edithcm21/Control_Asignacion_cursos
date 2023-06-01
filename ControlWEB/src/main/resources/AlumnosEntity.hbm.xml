@@ -41,8 +41,9 @@
         <property name="telefono">
             <column name="telefono" sql-type="varchar(12)" length="12" not-null="true"/>
         </property>
-        <property name="contraseña">
-            <column name="contraseña" sql-type="varchar(15)" length="15" not-null="true"/>
+
+        <property name="password1">
+            <column name="password1" sql-type="varchar(15)" length="15" not-null="true"/>
         </property>
     </class>
 </hibernate-mapping>

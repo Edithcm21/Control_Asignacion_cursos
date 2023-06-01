@@ -1,6 +1,8 @@
 package example;
 
+import Datos.AlumnosDao;
 import Datos.SemestreDao;
+import Modelo.AlumnosEntity;
 import Modelo.SemestreEntity;
 import Utils.HibernateUtils;
 import org.hibernate.Session;
@@ -17,18 +19,23 @@ public class Main {
 
 
         //Creamos una instancia a utilizar
-        semestre2=new SemestreEntity("PruebaSemestrexxx");
+        /*semestre2=new SemestreEntity("PruebaSemestrexxx");
         SemestreDao semestreDao=new SemestreDao();
         semestreDao.insert(semestre2);
 
         System.out.println(semestreDao.getSemestreById(1).getNumSemestre());
         semestreDao.listaSemestres();
-        SemestreEntity semestrem=new SemestreEntity(9,"PruebaUdate");
-        semestreDao.UpdateSemestre(semestrem);
+        SemestreEntity semestrem=new SemestreEntity(9,"PruebaUdate");*/
+        AlumnosEntity Alumno=new AlumnosEntity("S19002924","6372M4Z1437");
+        AlumnosDao alumno=new AlumnosDao();
+        alumno.validar("S19002924","6372M4Z1437");
+        System.out.println("Listando");
+        alumno.listar();
+        /*semestreDao.UpdateSemestre(semestrem);
         System.out.println("Listando semestre modificado");
         semestreDao.listaSemestres();
         semestreDao.deleteSemestre(semestrem);
-        System.out.println("Listando semestre eliminando");
+        System.out.println("Listando semestre eliminando");*/
 
 
 

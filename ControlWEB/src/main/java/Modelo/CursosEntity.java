@@ -19,6 +19,9 @@ public class CursosEntity {
     @Basic
     @Column(name = "nombre", nullable = true, length = 20)
     private String nombre;
+    @Basic
+    @Column(name = "clave_carrera", nullable = true)
+    private Integer claveCarrera;
 
     public String getNrc() {
         return nrc;
@@ -27,8 +30,6 @@ public class CursosEntity {
     public void setNrc(String nrc) {
         this.nrc = nrc;
     }
-
-
 
     public Integer getSemestre() {
         return semestre;
@@ -53,10 +54,6 @@ public class CursosEntity {
     public void setNombre(String nombre) {
         this.nombre = nombre;
     }
-
-    @Basic
-    @Column(name = "clave_carrera", nullable = true)
-    private Integer claveCarrera;
 
     public Integer getClaveCarrera() {
         return claveCarrera;

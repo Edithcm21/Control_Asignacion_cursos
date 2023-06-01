@@ -1,3 +1,4 @@
+<%@ taglib prefix="c" uri="http://java.sun.com/jsp/jstl/core" %>
 <html>
 
 <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap@4.3.1/dist/css/bootstrap.min.css" integrity="sha384-ggOyR0iXCbMQv3Xipma34MD+dH/1fQ784/j6cY/iJTQUOhcWr7x9JvoRxT2MZw1T" crossorigin="anonymous">
@@ -10,31 +11,25 @@
                     <div class="row g-0">
                         <div class="col-lg-6">
                             <div class="card-body p-md-4 mx-md-4 ">
-
                                 <div class="text-center">
-                                    <img src="./views/Flor_con_uv_sin_fondo.png"
+                                    <img src="Images/Flor_con_uv_sin_fondo.png"
                                          style="width: 185px;" alt="logo">
                                     <h3 class="mt-1 mb-3 pb-1">Iniciar Sesion</h3>
                                 </div>
-
-                                <form>
+                                <form action="ServletLogin" method="post">
                                     <div class="form-outline mb-2">
-                                        <label class="form-label" for="form2Example11">Username</label>
-                                        <input type="email" id="form2Example11" class="form-control"
-                                               placeholder="Phone number or email address" />
-
+                                        <label class="form-label" for="email">Correo UV</label>
+                                        <input type="text" name="matricula" id="email" class="form-control" minlength="9"/>
                                     </div>
 
                                     <div class="form-outline mb-2">
-                                        <label class="form-label" for="form2Example22">Password</label>
-                                        <input type="password" id="form2Example22" class="form-control" />
-
+                                        <label class="form-label" for="password">Contraseña</label>
+                                        <input type="password" name="password" id="password" class="form-control" />
                                     </div>
 
                                     <div class="text-center pt-1 mb-3 pb-1">
-                                        <button class="btn btn-primary btn-block fa-lg gradient-custom-2 mb-3" type="button">Log
-                                            in</button>
-                                        <a class="text-muted" href="#!">Forgot password?</a>
+                                        <input type="submit" class="btn btn-primary btn-block fa-lg gradient-custom-2 mb-3" name="accion" value="ingresar">
+                                         <a class="text-muted" href="">Forgot password?</a>
                                     </div>
 
                                 </form>
@@ -42,7 +37,7 @@
                             </div>
                                 <div class="col-lg-6 d-flex justify-content-start " >
                                     <div class="p-0">
-                                    <img src="./views/Captura%20de%20pantalla%202023-05-31%20121109.png" class="img-fluid" >
+                                    <img src="./Images/Captura%20de%20pantalla%202023-05-31%20121109.png" class="img-fluid" >
                                 </div>
                             </div>
                     </div>
