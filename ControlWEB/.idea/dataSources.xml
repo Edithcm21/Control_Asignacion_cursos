@@ -8,5 +8,16 @@
       <jdbc-url>jdbc:postgresql://localhost:5432/Control_Cursos</jdbc-url>
       <working-dir>$ProjectFileDir$</working-dir>
     </data-source>
+    <data-source source="LOCAL" name="hibernate.cfg.xml/Hibernate" uuid="d1c186b8-828b-43a0-89c4-c9e2f38f3dc3">
+      <driver-ref>postgresql</driver-ref>
+      <synchronize>true</synchronize>
+      <imported>true</imported>
+      <remarks>Hibernate
+
+C:/Users/edith/OneDrive/Documents/Octavo_Edith/TA_Informatica/Git_Proyecto/ControlWEB/src/main/resources/hibernate.cfg.xml</remarks>
+      <jdbc-driver>org.postgresql.Driver</jdbc-driver>
+      <jdbc-url>jdbc:postgresql://localhost:5432/Control_Cursos</jdbc-url>
+      <working-dir>$ProjectFileDir$</working-dir>
+    </data-source>
   </component>
 </project>

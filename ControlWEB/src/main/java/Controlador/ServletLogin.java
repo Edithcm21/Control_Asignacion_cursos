@@ -30,17 +30,20 @@ public class ServletLogin extends HttpServlet {
         String accion=request.getParameter("accion");
         switch (accion) {
             case "ingresar":
+                //obtengo los parametros de matricula y contraseña desde el formulario
                 matricula = request.getParameter("matricula");
                 contrasena = request.getParameter("password");
                 System.out.println(matricula+contrasena);
 
-
+                //Busco si existe esa matricula y ese alumno en la bd
                 alumnosEntity = alumnosDao.validar(matricula, contrasena);
                 if (alumnosEntity != null) {
+                    //Si esta mando a llamar la siguiente vista pasando los datos del alumno
                     request.setAttribute("alumno", alumnosEntity);
                     request.getRequestDispatcher("views/MuestreodeCursos.jsp").forward(request, response);
                 }
                 else {
+                    //Sino esta registrado regreso al login
                     System.out.println("El alumno no esta ");
                     request.getRequestDispatcher("index.jsp").forward(request, response);
 
