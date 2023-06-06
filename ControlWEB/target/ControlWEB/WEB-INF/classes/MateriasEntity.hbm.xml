@@ -26,5 +26,14 @@
         <property name="idCurso">
             <column name="id_curso" sql-type="varchar" not-null="true"/>
         </property>
+        <property name="cupoMin">
+            <column name="cupo_min" sql-type="integer" not-null="true"/>
+        </property>
+        <property name="cupoAct">
+            <column name="cupo_act" sql-type="integer" not-null="true"/>
+        </property>
+        <property name="cupoMax">
+            <column name="cupo_max" sql-type="integer" not-null="true"/>
+        </property>
     </class>
 </hibernate-mapping>
