@@ -2,8 +2,10 @@ package example;
 
 import Datos.AlumnosDao;
 import Datos.SemestreDao;
+import Datos.TablaSeleccionDao;
 import Modelo.AlumnosEntity;
 import Modelo.SemestreEntity;
+import Modelo.TablaSeleccion;
 import Utils.HibernateUtils;
 import org.hibernate.Session;
 import org.hibernate.Transaction;
@@ -31,6 +33,10 @@ public class Main {
         alumno.validar("S19002924","6372M4Z1437");
         System.out.println("Listando");
         alumno.listar();
+
+        TablaSeleccion tablaSeleccion=new TablaSeleccion();
+        TablaSeleccionDao tablaSeleccionDao=new TablaSeleccionDao();
+        tablaSeleccionDao.obtenerMateriasCurso(1,8);
         /*semestreDao.UpdateSemestre(semestrem);
         System.out.println("Listando semestre modificado");
         semestreDao.listaSemestres();

@@ -56,6 +56,8 @@ create table  if not exists Tipo_Mat(
 
 
  alter table profesores add column materias_puede varchar(200)
+ alter table profesores add column nombrep varchar(20)
+ alter table profesores drop column nombre
 
 
  

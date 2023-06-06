@@ -11,8 +11,17 @@ public class ProfesoresEntity {
     @Column(name = "curp", nullable = false, length = 18)
     private String curp;
     @Basic
-    @Column(name = "nombre", nullable = true, length = 15)
-    private String nombre;
+    @Column(name = "nombrep", nullable = true, length = 15)
+    private String nombrep;
+
+    public String getNombrep() {
+        return nombrep;
+    }
+
+    public void setNombrep(String nombrep) {
+        this.nombrep = nombrep;
+    }
+
     @Basic
     @Column(name = "apellidop", nullable = true, length = 15)
     private String apellidop;
@@ -62,11 +71,11 @@ public class ProfesoresEntity {
     }
 
     public String getNombre() {
-        return nombre;
+        return nombrep;
     }
 
     public void setNombre(String nombre) {
-        this.nombre = nombre;
+        this.nombrep = nombre;
     }
 
     public String getApellidop() {

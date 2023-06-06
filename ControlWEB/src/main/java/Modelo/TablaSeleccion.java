@@ -4,6 +4,7 @@ import java.sql.Time;
 
 public class TablaSeleccion {
     private String nrc;
+    private int id_materia;
     private String nombreMateria;
     private String profesor;
     private String apaterno;
@@ -16,8 +17,9 @@ public class TablaSeleccion {
 
     }
 
-    public TablaSeleccion(String nrc, String nombreMateria, String profesor, String apaterno, String amaterno, int cupo_actual, Time hora_inicio, Time hora_Final, String dia) {
+    public TablaSeleccion(String nrc, int idMateria, String nombreMateria, String profesor, String apaterno, String amaterno, int cupo_actual, Time hora_inicio, Time hora_Final, String dia) {
         this.nrc = nrc;
+        id_materia = idMateria;
         this.nombreMateria = nombreMateria;
         this.profesor = profesor;
         this.apaterno = apaterno;
@@ -98,5 +100,21 @@ public class TablaSeleccion {
 
     public void setDia(String dia) {
         this.dia = dia;
+    }
+
+    @Override
+    public String toString() {
+        return "TablaSeleccion{" +
+                "nrc='" + nrc + '\'' +
+                ", id_materia=" + id_materia +
+                ", nombreMateria='" + nombreMateria + '\'' +
+                ", profesor='" + profesor + '\'' +
+                ", apaterno='" + apaterno + '\'' +
+                ", amaterno='" + amaterno + '\'' +
+                ", cupo_actual=" + cupo_actual +
+                ", Hora_inicio=" + Hora_inicio +
+                ", Hora_Final=" + Hora_Final +
+                ", dia='" + dia + '\'' +
+                '}';
     }
 }

@@ -1,15 +1,15 @@
 <?xml version='1.0' encoding='utf-8'?>
 <!DOCTYPE hibernate-mapping PUBLIC
-    "-//Hibernate/Hibernate Mapping DTD 3.0//EN"
-    "http://www.hibernate.org/dtd/hibernate-mapping-3.0.dtd">
+        "-//Hibernate/Hibernate Mapping DTD 3.0//EN"
+        "http://www.hibernate.org/dtd/hibernate-mapping-3.0.dtd">
 <hibernate-mapping>
 
     <class name="Modelo.ProfesoresEntity" table="profesores" schema="public" catalog="Control_Cursos">
         <id name="curp">
             <column name="curp" sql-type="varchar(18)" length="18"/>
         </id>
-        <property name="nombre">
-            <column name="nombre" sql-type="varchar(15)" length="15" not-null="true"/>
+        <property name="nombrep">
+            <column name="nombrep" sql-type="varchar(15)" length="15" not-null="true"/>
         </property>
         <property name="apellidop">
             <column name="apellidop" sql-type="varchar(15)" length="15" not-null="true"/>
