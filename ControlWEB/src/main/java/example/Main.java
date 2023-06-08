@@ -36,7 +36,8 @@ public class Main {
 
         TablaSeleccion tablaSeleccion=new TablaSeleccion();
         TablaSeleccionDao tablaSeleccionDao=new TablaSeleccionDao();
-        tablaSeleccionDao.obtenerMateriasCurso(1,8);
+        //tablaSeleccionDao.obtenerMateriasCurso(1,8);
+        tablaSeleccionDao.horario(1,8);
         /*semestreDao.UpdateSemestre(semestrem);
         System.out.println("Listando semestre modificado");
         semestreDao.listaSemestres();

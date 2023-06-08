@@ -13,6 +13,12 @@ public class TablaSeleccion {
     private Time Hora_inicio;
     private Time Hora_Final;
     private String dia;
+    private String lunes=" ";
+    private String martes=" ";
+    private String miercoles=" ";
+    private String jueves= " ";
+    private String viernes=" ";
+
     public TablaSeleccion(){
 
     }
@@ -28,6 +34,21 @@ public class TablaSeleccion {
         Hora_inicio = hora_inicio;
         Hora_Final = hora_Final;
         this.dia = dia;
+    }
+
+    public TablaSeleccion(String nrc, int id_materia, String nombreMateria, String profesor, String apaterno, String amaterno, int cupo_actual, String lunes, String martes, String miercoles, String jueves, String viernes) {
+        this.nrc = nrc;
+        this.id_materia = id_materia;
+        this.nombreMateria = nombreMateria;
+        this.profesor = profesor;
+        this.apaterno = apaterno;
+        this.amaterno = amaterno;
+        this.cupo_actual = cupo_actual;
+        this.lunes = lunes;
+        this.martes = martes;
+        this.miercoles = miercoles;
+        this.jueves = jueves;
+        this.viernes = viernes;
     }
 
     public String getNrc() {
@@ -102,6 +123,54 @@ public class TablaSeleccion {
         this.dia = dia;
     }
 
+    public int getId_materia() {
+        return id_materia;
+    }
+
+    public void setId_materia(int id_materia) {
+        this.id_materia = id_materia;
+    }
+
+    public String getLunes() {
+        return lunes;
+    }
+
+    public void setLunes(String lunes) {
+        this.lunes = lunes;
+    }
+
+    public String getMartes() {
+        return martes;
+    }
+
+    public void setMartes(String martes) {
+        this.martes = martes;
+    }
+
+    public String getMiercoles() {
+        return miercoles;
+    }
+
+    public void setMiercoles(String miercoles) {
+        this.miercoles = miercoles;
+    }
+
+    public String getJueves() {
+        return jueves;
+    }
+
+    public void setJueves(String jueves) {
+        this.jueves = jueves;
+    }
+
+    public String getViernes() {
+        return viernes;
+    }
+
+    public void setViernes(String viernes) {
+        this.viernes = viernes;
+    }
+
     @Override
     public String toString() {
         return "TablaSeleccion{" +
@@ -115,6 +184,11 @@ public class TablaSeleccion {
                 ", Hora_inicio=" + Hora_inicio +
                 ", Hora_Final=" + Hora_Final +
                 ", dia='" + dia + '\'' +
+                ", lunes='" + lunes + '\'' +
+                ", martes='" + martes + '\'' +
+                ", miercoles='" + miercoles + '\'' +
+                ", jueves='" + jueves + '\'' +
+                ", viernes='" + viernes + '\'' +
                 '}';
     }
 }
