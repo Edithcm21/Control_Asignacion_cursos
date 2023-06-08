@@ -24,19 +24,13 @@ public class TablaSeleccionDao {
                     "join cursos\n" +
                     "on cursos.nrc=materias.id_curso\n" +
                     "join materia_aula\n" +
-                    "on materia_aula.id_materia=materias.codigo\n";
-                   // "where semestre="+id_semestre+" and clave_carrera="+id_carrera+" and cursos.nombre= 'Febrero-Julio2023'";
+                    "on materia_aula.id_materia=materias.codigo\n"+
+                    "where semestre="+id_semestre+" and clave_carrera="+id_carrera+" and cursos.nombre= 'Febrero-Julio2023'";
 
             Query query1 = session.createNativeQuery(sql);
             List<Object[]> results = query1.getResultList();
 
-            for (Object[] row : results) {
-                // Accede a los valores de cada columna en el resultado
-                String nrc = (String) row[0];
-                String nombreMateria = (String) row[1];
-                String nombreProfesor = (String) row[2];
-                // ... y así sucesivamente
-            }
+
             List<TablaSeleccion> lista=new ArrayList<>();
 
 
@@ -53,17 +47,10 @@ public class TablaSeleccionDao {
                 int idMateria=(int) materia[9];
                 TablaSeleccion tablaSeleccion=new TablaSeleccion(nrc, idMateria, nombre_materia,nombrep,apellidop,apellidom,cupo,hora,horafinal,dia);
                 lista.add(tablaSeleccion);
-                System.out.println("Imprimiendo los datos");
-                System.out.println(tablaSeleccion.getNombreMateria());
-                System.out.printf(tablaSeleccion.toString());
             }
-            results.forEach(n->{
-                //System.out.println("Nombre"+n.getNombreMateria());
-            });
 
 
             session.close();
-            System.out.println("Mandando datos de alumno");
             return lista;
 
         } catch (Exception e) {
@@ -77,7 +64,6 @@ public class TablaSeleccionDao {
         List<Integer> indices=new ArrayList<>();
         lista.forEach(n->{
             indices.add(n.getId_materia());
-            System.out.println(n.getId_materia());
         });
 
         Set<Integer> ids=new HashSet<>(indices);
@@ -92,12 +78,6 @@ public class TablaSeleccionDao {
 
             for (TablaSeleccion materia:lista
             ) {
-
-
-
-
-                System.out.println("Buscando dias de la semana de indice "+indice+"id_materia" +materia.getId_materia()+"Dia"+materia.getDia());
-
                 if(materia.getId_materia()==indice){
                     nueva.setNrc(materia.getNrc());
                     nueva.setNombreMateria(materia.getNombreMateria());
@@ -127,15 +107,10 @@ public class TablaSeleccionDao {
 
                 }
 
-
-
             }
-            System.out.println(nueva.toString());
             listahorario.add(nueva);
             i++;
         }
-
-
     return listahorario;
     }
 

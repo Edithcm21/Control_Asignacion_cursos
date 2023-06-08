@@ -7,7 +7,6 @@ Modelo\ProfesoresEntity.class
 Datos\AlumnosDao.class
 Modelo\AulaEntity.class
 Modelo\MateriasEntity.class
-Datos\Servlet.class
 Modelo\CarreraEntity.class
 Modelo\TipoContratoEntity.class
 Datos\SemestreDao.class

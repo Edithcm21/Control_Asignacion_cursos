@@ -40,7 +40,8 @@ public class ServletLogin extends HttpServlet {
                 if (alumnosEntity != null) {
                     //Si esta mando a llamar la siguiente vista pasando los datos del alumno
                     request.setAttribute("alumno", alumnosEntity);
-                    request.getRequestDispatcher("views/MuestreodeCursos.jsp").forward(request, response);
+                    System.out.println("Mandando a lla,ar al servlet");
+                    request.getRequestDispatcher("ServletSeleccionCursos?menu=cursos&accion=listar").forward(request, response);
                 }
                 else {
                     //Sino esta registrado regreso al login
