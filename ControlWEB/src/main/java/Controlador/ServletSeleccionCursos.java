@@ -2,9 +2,11 @@ package Controlador;
 
 import Datos.AlumnosDao;
 import Datos.MateriaAlumnoDao;
+import Datos.MateriasDao;
 import Datos.TablaSeleccionDao;
 import Modelo.AlumnosEntity;
 import Modelo.MateriaAlumnoEntity;
+import Modelo.MateriasEntity;
 import Modelo.TablaSeleccion;
 
 import javax.servlet.*;
@@ -31,6 +33,8 @@ public class ServletSeleccionCursos extends HttpServlet {
     List<TablaSeleccion> lista=new ArrayList<>();
     TablaSeleccion materia_seleccionada=new TablaSeleccion();
     MateriaAlumnoDao materiaAlumnoDao=new MateriaAlumnoDao();
+    MateriasEntity materiasEntity=new MateriasEntity();
+    MateriasDao materiasDao=new MateriasDao();
 
 
     @Override
@@ -109,14 +113,24 @@ public class ServletSeleccionCursos extends HttpServlet {
                 System.out.println("Ingreso a la opcion de Guardar las materias seleccionadas del alumno");
                 id_alumno=request.getParameter("id_alumno");
                 System.out.println(id_alumno+"Id del alumno ");
+                AtomicBoolean exito= new AtomicBoolean(false);
                 cursosSeleccionados.forEach(n->{
                     MateriaAlumnoEntity nueva=new MateriaAlumnoEntity(id_alumno,n.getId_materia());
-                    materiaAlumnoDao.insert(nueva);
-
+                    exito.set(materiaAlumnoDao.insert(nueva));
+                    materiasEntity=materiasDao.getMateriaById(nueva.getIdMateria());
+                    int cupo=materiasEntity.getCupoAct();
+                    materiasEntity.setCupoAct(cupo-1);
+                    materiasDao.UpdateCupo(materiasEntity);
                 });
+                if(exito.get() ==true){
+                    System.out.println("Listooo");
+                    request.getRequestDispatcher("views/Notificacion..jsp").forward(request, response);
 
-                System.out.println("Listooo");
-                request.getRequestDispatcher("views/Notificacion..jsp").forward(request, response);
+                }
+                else
+                    request.getRequestDispatcher("ServletSeleccionCursos?menu=cursos&accion=listar").forward(request, response);
+
+
                 break;
 
         }

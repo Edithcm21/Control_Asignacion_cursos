@@ -5,6 +5,7 @@ import Datos.MateriaAlumnoDao;
 import Datos.SemestreDao;
 import Datos.TablaSeleccionDao;
 import Modelo.AlumnosEntity;
+import Modelo.MateriasEntity;
 import Modelo.SemestreEntity;
 import Modelo.TablaSeleccion;
 import Utils.HibernateUtils;
@@ -37,6 +38,7 @@ public class Main {
 
         MateriaAlumnoDao materiaAlumnoDao=new MateriaAlumnoDao();
         System.out.println(materiaAlumnoDao.getMateriaAlumnoById("S19002924"));
+        //MateriasEntity=new (MateriasEntity)
         //TablaSeleccion tablaSeleccion=new TablaSeleccion();
        // TablaSeleccionDao tablaSeleccionDao=new TablaSeleccionDao();
         //tablaSeleccionDao.obtenerMateriasCurso(1,8);

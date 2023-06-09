@@ -2,6 +2,7 @@ Controlador\ServletLogin.class
 Modelo\TipoEstudiosEntity.class
 Modelo\CursosEntity.class
 Modelo\MateriaAlumnoEntity.class
+Datos\MateriasDao.class
 Modelo\MatProfesorEntity.class
 Modelo\ProfesoresEntity.class
 Datos\AlumnosDao.class
