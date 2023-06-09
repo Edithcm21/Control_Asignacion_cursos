@@ -1,6 +1,7 @@
 package example;
 
 import Datos.AlumnosDao;
+import Datos.MateriaAlumnoDao;
 import Datos.SemestreDao;
 import Datos.TablaSeleccionDao;
 import Modelo.AlumnosEntity;
@@ -34,10 +35,12 @@ public class Main {
         System.out.println("Listando");
         alumno.listar();
 
-        TablaSeleccion tablaSeleccion=new TablaSeleccion();
-        TablaSeleccionDao tablaSeleccionDao=new TablaSeleccionDao();
+        MateriaAlumnoDao materiaAlumnoDao=new MateriaAlumnoDao();
+        System.out.println(materiaAlumnoDao.getMateriaAlumnoById("S19002924"));
+        //TablaSeleccion tablaSeleccion=new TablaSeleccion();
+       // TablaSeleccionDao tablaSeleccionDao=new TablaSeleccionDao();
         //tablaSeleccionDao.obtenerMateriasCurso(1,8);
-        tablaSeleccionDao.horario(1,8);
+        //tablaSeleccionDao.horario(1,8);
         /*semestreDao.UpdateSemestre(semestrem);
         System.out.println("Listando semestre modificado");
         semestreDao.listaSemestres();

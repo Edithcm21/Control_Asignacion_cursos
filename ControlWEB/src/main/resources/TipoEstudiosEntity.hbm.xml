@@ -7,6 +7,7 @@
     <class name="Modelo.TipoEstudiosEntity" table="tipo_estudios" schema="public" catalog="Control_Cursos">
         <id name="idTipo">
             <column name="id_tipo" sql-type="integer"/>
+            <generator class="increment"></generator>
         </id>
         <property name="nombrete">
             <column name="nombrete" sql-type="varchar(30)" length="30" not-null="true"/>

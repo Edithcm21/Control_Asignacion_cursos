@@ -22,6 +22,15 @@ public class MateriaAlumnoEntity {
     @Column(name = "id_xx", nullable = false)
     private int idXx;
 
+    public MateriaAlumnoEntity(){}
+
+    public MateriaAlumnoEntity(String idAlumno, Integer idMateria) {
+        this.idAlumno = idAlumno;
+        this.idMateria = idMateria;
+        this.calificacion=0;
+        this.indicencias=" ";
+    }
+
     public String getIdAlumno() {
         return idAlumno;
     }

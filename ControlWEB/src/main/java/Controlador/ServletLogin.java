@@ -1,6 +1,7 @@
 package Controlador;
 
 import Datos.AlumnosDao;
+import Datos.MateriaAlumnoDao;
 import Modelo.AlumnosEntity;
 
 import javax.servlet.*;
@@ -15,6 +16,7 @@ public class ServletLogin extends HttpServlet {
     AlumnosDao alumnosDao=new AlumnosDao();
     String matricula;
     String contrasena;
+    MateriaAlumnoDao materiaAlumnoDao=new MateriaAlumnoDao();
 
 
     @Override
@@ -40,8 +42,16 @@ public class ServletLogin extends HttpServlet {
                 if (alumnosEntity != null) {
                     //Si esta mando a llamar la siguiente vista pasando los datos del alumno
                     request.setAttribute("alumno", alumnosEntity);
+                    request.setAttribute("id_Alumno",alumnosEntity.getMatricula());
                     System.out.println("Mandando a lla,ar al servlet");
-                    request.getRequestDispatcher("ServletSeleccionCursos?menu=cursos&accion=listar").forward(request, response);
+                    if(materiaAlumnoDao.getMateriaAlumnoById(alumnosEntity.getMatricula())==true){
+                        System.out.println("intento llamar al notificacion");
+                        request.getRequestDispatcher("views/Notificacion1.jsp").forward(request, response);
+                    }
+
+                    else{
+                        request.getRequestDispatcher("ServletSeleccionCursos?menu=cursos&accion=listar").forward(request, response);
+                    }
                 }
                 else {
                     //Sino esta registrado regreso al login

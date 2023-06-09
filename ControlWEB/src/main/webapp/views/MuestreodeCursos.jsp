@@ -1,4 +1,6 @@
-<%--
+<%@ page import="Modelo.TablaSeleccion" %>
+<%@ page import="java.util.List" %>
+<%@ page import="Modelo.AlumnosEntity" %><%--
   Created by IntelliJ IDEA.
   User: edith
   Date: 31/05/2023
@@ -17,6 +19,9 @@
 
         .small-text10 {
             font-size: 7px;
+        }
+        .small-text12{
+            font-size: 9px;
         }
         .tabla-seleccion {
             background-color: #24AD19;
@@ -51,7 +56,7 @@
             <div class="col-lg-8">
                 <div class="row g-0">
                     <h3>Materias seleccionadas:</h3>
-                    <table class="table table-striped small-text10">
+                    <table class="table table-striped small-text12">
                         <thead>
                         <tr class="tabla-seleccion">
 
@@ -68,21 +73,42 @@
                         </tr>
                         </thead>
                         <tbody>
+                        <%
+                            AlumnosEntity alumno=(AlumnosEntity)request.getAttribute("alumno");
+                            List<TablaSeleccion> CursoSeleccionado=(List)request.getAttribute("CursosSeleccionados");
+                            if(CursoSeleccionado!=null){
+                                for(TablaSeleccion lista:CursoSeleccionado)
+                                {
+
+
+
+                        %>
                         <tr>
-                            <th scope="row">1</th>
-                            <td>Mark</td>
-                            <td>Otto</td>
-                            <td>@mdo</td>
-                            <th scope="row">1</th>
-                            <td>Mark</td>
-                            <td>Otto</td>
-                            <td>@mdo</td>
-                            <td>xx</td>
-                            <td>Botones</td>
+                            <th scope="row"><%=lista.getNrc()+lista.getId_materia()%></th>
+                            <td><%=lista.getNombreMateria()%></td>
+                            <td class="small-text13"><%=lista.getProfesor()+" "+lista.getApaterno()+" "+lista.getAmaterno()%></td>
+                            <td><%=lista.getCupo_actual()%></td>
+                            <td><%=lista.getLunes()%></td>
+                            <td><%=lista.getMartes()%></td>
+                            <td><%=lista.getMiercoles()%></td>
+                            <td><%=lista.getJueves()%></td>
+                            <td><%=lista.getViernes()%></td>
+                            <td><a class="btn btn-outline-danger btn-sm small-text12" methods="post" href="ServletSeleccionCursos?menu=ServletSeleccionCursos&accion=quitar&id_materia=<%=lista.getId_materia()%>">Quitar</a></td>
                         </tr>
+                        <%
+                            }
+                        }
+
+                        else{
+                        %>
+                        <option value="No existe oferta"></option>
+                        <%
+                            }
+                        %>
 
                         </tbody>
                     </table>
+                    <td><a class="btn btn-primary btn-sm small-text12" methods="post"  onclick="return confirm('¿Estás seguro de realizar esta acción?')" href="ServletSeleccionCursos?menu=materias&accion=Guardar&id_alumno=<%=alumno.getMatricula()%>">Guardar materias Seleccionadas</a></td>
                 </div>
 
                 <div class="row g-0 flex-content justify-content-center align-items-center">
@@ -112,13 +138,13 @@
 
                     <br><br>
                     <h3>Selecciona materias:</h3>
-                    <table class="table table-striped small-text10">
+                    <table class="table table-striped small-text12">
                         <thead>
                         <tr class="tabla-seleccion">
 
                             <th scope="col">NRC</th>
                             <th scope="col">MATERIA</th>
-                            <th scope="col">ACADÉMICO</th>
+                            <th scope="col" >ACADÉMICO</th>
                             <th scope="col">CUPO</th>
                             <th scope="col">LUN</th>
                             <th scope="col">MAR</th>
@@ -129,24 +155,39 @@
                         </tr>
                         </thead>
                         <tbody>
-                        <tr>
-                            <th scope="row">1</th>
-                            <td>Mark</td>
-                            <td>Otto</td>
-                            <td>@mdo</td>
-                            <td>xx</td>
-                            <td>xx</td>
-                            <td>Mark</td>
-                            <td>@mdo</td>
-                            <td>xx</td>
-                            <td><button type="submit" class="btn btn-outline-success"  style="font-size: 7px;">Agregar</button></td>
-                        </tr>
+                        <%
+                            List<TablaSeleccion> horario=(List)request.getAttribute("horario");
+                            if(horario!=null){
+                                for(TablaSeleccion lista:horario)
+                                    {
 
+
+
+                        %>
+                        <tr>
+                            <th scope="row"><%=lista.getNrc()+lista.getId_materia()%></th>
+                            <td><%=lista.getNombreMateria()%></td>
+                            <td class="small-text13"><%=lista.getProfesor()+" "+lista.getApaterno()+" "+lista.getAmaterno()%></td>
+                            <td><%=lista.getCupo_actual()%></td>
+                            <td><%=lista.getLunes()%></td>
+                            <td><%=lista.getMartes()%></td>
+                            <td><%=lista.getMiercoles()%></td>
+                            <td><%=lista.getJueves()%></td>
+                            <td><%=lista.getViernes()%></td>
+                            <td><a class="btn btn-outline-success btn-xs small-text12" methods="post" href="ServletSeleccionCursos?menu=ServletSeleccionCursos&accion=agregar&id_materia=<%=lista.getId_materia()%>" >Agregar</a></td>
+                        </tr>
+                        <%
+                                }
+                            }
+
+                            else{
+                                %>
+                                <option value="No existe oferta"></option>
+                        <%
+                            }
+                        %>
                         </tbody>
                     </table>
-
-
-
                 </div>
 
             </div>
@@ -162,9 +203,7 @@
             </div>
         </div>
 
-
     </div>
-
 </section>
 
 </body>

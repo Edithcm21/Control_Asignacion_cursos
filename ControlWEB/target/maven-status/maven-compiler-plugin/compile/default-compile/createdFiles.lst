@@ -11,6 +11,7 @@ Modelo\CarreraEntity.class
 Modelo\TipoContratoEntity.class
 Datos\SemestreDao.class
 Utils\HibernateUtils.class
+Controlador\ServletMateriasAumno.class
 example\Main.class
 Modelo\SemestreEntity.class
 Modelo\TipoMatEntity.class
