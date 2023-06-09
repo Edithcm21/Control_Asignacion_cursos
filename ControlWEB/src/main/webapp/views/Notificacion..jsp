@@ -17,13 +17,16 @@
     <div class="container-fluid px-0 py-0">
         <div class="row ">
             <div class="col-lg-12 d-flex justify-content-center " >
-                <br><br>
-                <H1>Tu inscripcion ha sido realizada con exito</H1>
+                <H1>Inscripcion realizada con exito</H1>
             </div>
             <div class="col-lg-12 d-flex justify-content-center " >
                 <img src="./Images/Flor_con_uv_sin_fondo.png" class="img-fluid" width="30%">
+            </div >
+            <div class="col-lg-12 d-flex justify-content-center "><a href="ServletSeleccionCursos?menu=materias&accion=cerrar" > <img src="./Images/cerrar.png " class="img-fluid" width="30%"></a>
             </div>
+
         </div>
+
     </div>
 </section>
 

@@ -31,6 +31,7 @@ public class ServletLogin extends HttpServlet {
         System.out.println("Entro al post");
         String accion=request.getParameter("accion");
         switch (accion) {
+
             case "ingresar":
                 //obtengo los parametros de matricula y contraseña desde el formulario
                 matricula = request.getParameter("matricula");

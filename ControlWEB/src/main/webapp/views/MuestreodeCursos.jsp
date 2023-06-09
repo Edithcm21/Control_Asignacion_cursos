@@ -194,7 +194,7 @@
 
             <div class="col-lg-2 d-flex justify-content-start">
                 <div class="p-0">
-                    <a href="./index.jsp" > <img src="./Images/cerrar.png " class="img-fluid" width="30%"></a>
+                    <a href="ServletSeleccionCursos?menu=materias&accion=cerrar" > <img src="./Images/cerrar.png " class="img-fluid" width="30%"></a>
                     <br><br>
                     <img src="./Images/perfil.png " class="img-fluid" width="30%">
 

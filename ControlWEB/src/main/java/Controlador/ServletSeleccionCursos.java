@@ -39,6 +39,13 @@ public class ServletSeleccionCursos extends HttpServlet {
         String accion = request.getParameter("accion");
 
         switch (accion) {
+            case "cerrar":
+                cursosSeleccionados.clear();
+                lista.clear();
+                alumno=null;
+                System.out.println("Cerro sesion ");
+                request.getRequestDispatcher("index.jsp").forward(request,response);
+                break;
             case "agregar":
                 System.out.println("Ingreso a la opcion de agregar del get");
                 //System.out.println(request.getParameter("id_materia"));
@@ -109,7 +116,7 @@ public class ServletSeleccionCursos extends HttpServlet {
                 });
 
                 System.out.println("Listooo");
-                request.getRequestDispatcher("views/Notificacion.jsp").forward(request, response);
+                request.getRequestDispatcher("views/Notificacion..jsp").forward(request, response);
                 break;
 
         }
@@ -138,7 +145,7 @@ public class ServletSeleccionCursos extends HttpServlet {
                     System.out.println(n.toString());
                 });
                 request.setAttribute("horario", lista);
-                request.getRequestDispatcher("views/MuestreodeCursos..jsp").forward(request, response);
+                request.getRequestDispatcher("views/MuestreodeCursos.jsp").forward(request, response);
                 break;
             case "agregar":
                 System.out.println("Ingreso a la opcion de agregar");
